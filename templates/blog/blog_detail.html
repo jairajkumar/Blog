@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block tittle %} {{ object.title }}
+{% endblock tittle %}
+
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 card mb-4  mt-3 top">
+      <div class="card-body">
+        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        <p class="card-text ">{{ object.content | safe }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %} 
